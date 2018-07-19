@@ -1,0 +1,289 @@
+* {
+				margin: 0;
+				padding: 0;
+				
+			}
+			body {
+				background-color: #F5F5F5;
+				
+			}
+			ul {
+				list-style: none;
+			}
+			
+			.banxin {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			/*页面头部分样式*/
+			
+			.top {
+				
+				padding: 20px;
+				height: 80px;
+				border-bottom: 1px solid #C4C4C4;
+			}
+			
+			.diantu {
+			margin-left: 200px;
+			float: left;
+			margin-right: 16px;
+
+		}
+		.diantu img {
+				width: 104px;
+				height: 79px;
+			}
+		.pingfen {
+			float:left;
+			margin-top: 20px;
+			
+		}
+		.restaurant-name {
+			color: #333;
+			font-family: "微软雅黑";
+			font-size: 14px;
+			font-weight: 700;
+			margin-right: 10px;
+
+		}
+		.pingjiarank {
+			display: block;
+			margin-top: 10px;
+		
+			
+
+		}
+		.pingjiarank span {
+			font-size: 12px;
+			color: #666666;
+			margin-left: 10px;
+		}
+		.biaoti {
+			letter-spacing: 40px;
+			float: left;
+			margin-left: 15%;
+			font-size: 50px;
+			font-family: "微软雅黑";
+			
+		}
+		.Login {
+			margin-top: 15px;
+			float: right;
+			color: #333333;
+			font-family: "微软雅黑";
+		}
+		.Login li {
+			margin-right: 15px;
+			cursor: pointer;
+			padding: 10px;
+			float: left;
+
+		}
+		
+		/*页面头部分样式结束*/
+		
+		/*商家管理部分*/
+		.sellerManage {
+			overflow: hidden;
+			background-color: #fff;
+		}
+		.sellerManage-nav {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+
+			width: 195px;
+			height: 634px;
+			background-color: #06C1AE;
+		}
+		.qooqoqo {
+			margin-left: -7px;
+			font-size: 14px;
+			font-family: "宋体";
+			font-weight: normal;
+			margin-top: 20px;
+		}
+		
+		.sellerManage-nav li{
+			
+				cursor: pointer;
+				color: #fff;
+				background-color: #06C1AE;
+				box-sizing: border-box;
+				width: 100%;
+				padding: 20px 45px;
+		}
+		
+		.sellerManage-nav li:hover{
+			
+				
+				background-color: rgba(0,0,0,.2);
+				
+		}
+		.sellerManage-nav li span {
+			margin-right: 15px;
+		}
+		
+		.sellerManage-nav li:first-child {
+
+			background-color: #06C1AE;
+			cursor: default;
+			color: #fff;
+			font-size: 26px;
+			font-family: "微软雅黑";
+			font-weight: 700;
+		}
+		
+		.sellerManage-container {
+
+			padding-top: 60px;
+			padding-left:180px
+		}
+		.navName {
+			font-size: 24px;
+			font-family: "微软雅黑";
+			height: 80px;
+			line-height: 80px;
+
+
+			border-bottom: 1px solid #666666;
+		}
+		
+		.aaaaaaaa span{
+			margin-right: 40px;
+		}
+		.hideTime ,.hideTel,.hideAddress{
+			height: 50px;
+			line-height: 50px;
+			border-bottom: 1px solid #666666;
+
+		}
+		
+		/*订单管理部分样式*/
+		.orderPart-nav {
+			margin-top: 25px;
+		}
+		.Select {
+			border-bottom: 1px solid #F79100!important;
+		}
+		.orderPart-nav span {
+			cursor: pointer;
+			margin-right: 30px;
+			padding: 20px;
+			border-bottom: 1px solid #FFF;
+		}
+		.orderPart .ordercontent {
+			margin-top: 40px;
+			border: 1px solid #666;
+			padding: 20px;
+		}
+		
+		.bianhao {
+			margin-bottom: 30px;
+		}
+		
+		.contaceMan,.IdforOrder,.Tel {
+
+			font-weight: 700;
+			margin-right: 40px;
+		}
+		.dizhi {
+			font-weight: 700;
+			margin-right: 45px;
+		}
+		.shijian {
+			font-size: 20px;
+			font-weight: 700;
+		}
+		
+		.ordercontent ul li {
+			line-height: 56px;
+			height: 56px;
+
+			border-bottom: 1px dashed #BBBBBB;
+		}
+		.ordercontent li:first-child {
+			font-size: 14px;
+			font-family: "微软雅黑";
+			color: #000;
+			font-weight: 700;
+		}
+		.caipin {
+
+
+			font-size: 14px;
+			width: 200px;
+			color: #000;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+		.jiage {
+			
+			color: #000;
+		}
+		
+		.heji {
+			font-family: "微软雅黑";
+			font-weight:700;
+			color: #000;
+		}
+		.totalprice {
+			color: #000;
+		}
+		.xdshijian {
+			font-size: 20px;
+			font-weight: 700;
+			margin-right: 75px;
+		}
+		
+		.peisong {
+			margin-bottom: 10px;
+			height: 40px;
+			border-bottom: 1px solid #C4C4C4;
+		}
+		.bbbb {
+			margin-top: 35px;
+		}
+		.beizhu {
+			box-sizing: border-box;
+			font-size: 18px;
+			padding-left: 20px;
+			resize: none;
+			margin-left: 15px;
+			outline: none;
+			border: 1px solid #E5E5E5;
+			vertical-align: top;
+		}
+		.jiedan {
+
+			background-color: #06C1AE;
+			float: right;
+			color: #fff;
+			width: 100px;
+			text-align: center;
+			border-radius: 30px;
+			height: 40px;
+			cursor: pointer;
+			line-height: 40px;
+			margin-top: 50px;
+			
+		}
+		.jiange {
+			margin-left: 604px;
+		}
+		.jianjian {
+
+			display: inline-block;
+
+			margin-left: 593px;
+
+
+
+		}
+		
+		
+		/*订单管理部分样式结束*/
+		
+		/*商家管理部分结束*/

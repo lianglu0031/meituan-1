@@ -1,0 +1,698 @@
+	@font-face {  /* 电脑中没有的字体，我们需要声明 */
+  			font-family: 'icomoon';
+ 			 src:  url('../fonts/icomoon.eot?7kkyc2');
+  			 src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+   			 url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+   			 url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+   			 url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  			font-weight: normal;
+  			font-style: normal;
+  }
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body {
+			background-color: #f5f5f5;
+		}
+		.banxin {
+			width: 980px;
+			margin: 0 auto;
+		}
+		/*页面头部分样式开始*/
+		#name {
+				display:inline-block;
+				height:32px;
+				color: #d7d7dd;
+				font-size: 14px;
+				position: relative;
+				cursor: pointer;
+				visibility: none;
+			}
+		#name #down{
+			visibility: hidden;
+		}
+			#name:hover #xialikuang{
+				
+				visibility: visible;
+			}
+			#xialikuang {
+			z-index: 1;
+			position: absolute;
+			background-color: #FFFFFF;
+			visibility:hidden;
+		}
+		#xialikuang:hover {
+			visibility: visible;
+		}
+		#xialikuang li a {
+			font-size: 12px;
+			display: block;
+			width: 58px;
+			padding-left: 8px;
+			color: #898989;
+		}
+		#xialikuang a:hover {
+			background-color: rgba(0,0,0,.1);
+		}
+		#down {
+				color: #d7d7dd;
+				font-size: 8px;
+			}
+			
+		header {
+			height: 32px;
+			line-height: 32px;
+			background-color: #333;
+		}
+		.top-nav {
+			height: 32px;
+			font-size: 9px;
+			
+		}
+		.top-left .addressimg{
+			font-family: "icomoon";
+			color:#D7D7D7 ;
+			font-size: 10px;
+
+		}
+		.address {
+			color: #d7d7d7;
+			padding-right: 5px;
+		}
+		.top-left {
+			float: left;
+		}
+		.top-left a{
+			color: #f8cc5c;
+			padding-left: 3px;
+
+		}	
+		.top-left i {
+			font-size: 10px;
+			font-style: normal;
+			color: #61574c;
+		}
+		/*顶部右部分开始*/
+		.top-right {
+			float: right;
+		}
+		.top-right .register {
+			margin-right: 2px;
+			color: #d7d7dd;
+		}
+		.login {
+			margin-left: 1px;
+			color: #D7D7DD;
+			margin-right: 43px;
+		}
+		
+		.top-right i {
+			font-size: 10px;
+			font-style: normal;
+			color: #d7d7dd;
+		}
+		.mobileVer, .meituanwang,.contact{
+			font-family: "icomoon";
+			margin-right: 15px;
+			color: #D7D7DD;
+
+		}
+		.contact {
+			margin-right: 0;
+		}
+		/*页面头部分样式结束*/
+		/*导航栏部分样式开始*/
+		.nav {
+			height: 85px;
+			background-color: #fff;
+			margin-bottom: 12px;
+		}
+		.nav-in {
+			height: 85px;
+			line-height: 85px;
+
+			position: relative;
+		}
+		.logo a img {
+			position: absolute;
+			left: 0;
+			top: 20px;
+			
+		}
+		/*小导航栏部分样式*/
+		.navitem li{
+			float: left;
+			margin-right: 64px;
+		}
+		.navitem li:first-child {
+			margin-left: 300px;
+		}
+		.navitem li a{
+			color: #333;
+		}
+		.navitem li a:hover {
+			color: #ffa765;
+		}
+		/*搜索框样式*/
+		.search {
+			width: 300px;
+			height: 42px;
+			line-height: 0;
+			background-color: purple;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.search input {
+			width: 250px;
+			height: 42px;
+			outline: none;
+			box-sizing: border-box;
+			border: 2px solid #e5e5e5;
+			float: left;
+			padding-left: 8px;
+		}
+		.search button {
+			outline: none;
+			float:left;
+			width: 50px;
+			height: 42px;
+			box-sizing: border-box;
+			border: 2px solid #E5E5E5;
+			border-left: 0;
+			background-color: #fff;
+			cursor: pointer;
+		}
+		.search button span {
+			font-family: "icomoon";
+			font-size: 20px;
+		}
+		
+		/*导航栏部分样式结束*/
+		
+		
+		/*页面底部分*/
+		footer {
+			height: 185px;
+			background-color: #fff;
+			margin-top: 10px;
+			margin-bottom: 12px;
+		}
+		.footer-in {
+			padding: 32px 0;
+
+		}
+		.col1 {
+			width: 146px;
+			float: left;
+		}
+		.col1 li {
+			line-height:33px ;
+		}
+		.col1 li a {
+			color: #666666;
+			font-size: 14px;
+		}
+		.col1 li a:hover {
+			color: #000000;
+		}
+		.telephone {
+			float: left;
+			width: 250px;
+			height: 114px;
+			margin-top: 10px;
+
+			border-left: 1px dashed #333333;
+			border-right: 1px dashed #333;
+		}
+		.telephone h4 {
+			margin-left: 48px;
+			color: #333;
+			font-size: 20px;
+		}
+		.telephone p {
+			margin-left: 48px;
+			margin-top: 10px;
+			color: #666;
+			font-size: 14px;
+		}
+		
+		
+		.erweima img{
+			float: left;
+			margin-left: 50px;
+			margin-right: 15px;
+
+		}
+		.erweima h4 {
+			color: #2a2a2a;
+			margin-top: 10px;
+		}
+		.erweima p {
+			margin-top: 10px;
+			color: #666;
+			font-size: 12px;
+		}
+		/*页面底部分结束*/
+		
+		/*版权样式*/
+		.copyright {
+			width: 500px;
+			height: 42px;
+			margin: 0 auto;
+
+		}
+		.copyright img {
+			vertical-align: middle;
+		}
+		.copyright span {
+			color: #999;
+			font-size: 12px;
+			margin-left: 20px;
+		}
+		
+		/*餐馆主体部分*/
+		.hidebox {
+			visibility: hidden;
+			z-index: 1;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: #fff;
+			width: 330px;
+			height: 220px;
+			box-shadow: 2px 2px 5px slategray;
+		}
+		.hideTime {
+			margin-top: 110px;
+			margin-left: 20px;
+			color: #666666;
+			font-size: 12px;
+		}
+		
+		.hideTime span,.hideAddress span,.hidebox,span {
+			margin-right: 10px;
+		}
+		.hideAddress span:first-child{
+			font-size: 16px;
+		}
+		
+		.hideAddress,.hideTel {
+			margin-top: 15px;
+			margin-left: 20px;
+			color: #666666;
+			font-size: 12px;
+		}
+		.restaurant-left-left {
+			position: relative;
+			
+		}
+		.restaurant-left-left:hover .hidebox{
+			visibility: visible;
+		}
+		
+		.restaurant {
+			height: 120px;
+			margin-bottom: 10px;
+			background-color: #fff;
+
+			
+		}
+		.restaurant-left {
+			box-sizing: border-box;
+			float: left;
+			width: 842px;
+			height: 120px;
+			padding: 22px;
+			border-right: 1px dashed #666666;
+
+		}
+		
+		
+		.diantu {
+			float: left;
+			margin-right: 16px;
+
+		}
+		.pingfen {
+			float:left;
+			margin-top: 20px;
+			
+		}
+		.restaurant-name {
+			color: #333;
+			font-family: "微软雅黑";
+			font-size: 14px;
+			font-weight: 700;
+			margin-right: 10px;
+
+		}
+		.arrow {
+			font-family: arial;
+			font-size: 14px;
+		}
+		.pingjiarank {
+			display: block;
+			margin-top: 10px;
+		
+			
+
+		}
+		.pingjiarank span {
+			font-size: 12px;
+			color: #666666;
+			margin-left: 10px;
+		}
+		.restaurant-right-right {
+			float: right;
+		}
+		.restaurant-right-right li {
+			padding-top: 10px;
+			float: left;
+			width: 144px;
+		}
+		.restaurant-right-right li p {
+			color: #6a6a6a;
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+		.shuzi {
+			color: #4a4a4a;
+			font-weight: 700;
+			font-size: 35px;
+		}
+		.restaurant-right-right li span:last-child {
+			color: #4A4A4A;
+			font-size: 14px;
+		}
+		
+		.restaurant-right {
+			box-sizing: border-box;
+			float: right;
+			width: 138px;
+			height: 120px;
+			padding: 30px;
+
+			
+		}
+		.restaurant-right p {
+			font-size: 14px;
+			color: #4A4A4A;
+			margin-left: 10px;
+			margin-bottom: 5px;
+		}
+		.restaurant-right span {
+			font-size: 30px;
+			margin-left: 30px;
+			cursor: pointer;
+		}
+		.restaurant-right span:hover{
+			color: red;
+		}
+		/*餐馆主体部分结束*/
+		
+		/*菜单部分*/
+		
+		
+		.dishlist-top {
+
+			width: 660px;
+			height: 50px;
+			box-sizing: border-box;
+			background-color: #fff;
+			padding: 14px 42px;
+			border-bottom: 1px solid #C4C4C4;
+		}
+		
+		.dishlist-top li {
+			float: left;
+			
+		}
+		.dishlist-top li span{
+			cursor: pointer;
+			font-family: "微软雅黑";
+			margin-right: 50px;
+		}
+		.current {
+			color: #ffa627;
+		}
+		.dishlist-bottom {
+			box-sizing: border-box;
+			width:660px ;
+			background-color: #fff;
+			padding: 23px 30px 0px;
+			overflow: hidden;
+		}
+		.dishlist-bottom li {
+			float: left;
+		}
+		.dishlist-bottom .current a{
+			color:#ffa627 ;
+		}
+		.dishlist-bottom li a {
+			display: inline-block;
+			color: #000;
+			width: 98px;
+			margin-right: 50px;
+			margin-bottom: 25px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow:ellipsis ;
+		}
+		.dianname {
+
+
+			font-size: 14px;
+			
+		}
+		/*菜单部分结束*/
+		
+		/*菜品部分开始*/
+		.dishbox {
+			margin-top: 20px;
+		}
+		
+		.dishbox-top {
+
+			width: 660px;
+			height: 50px;
+			box-sizing: border-box;
+			background-color: #fff;
+			padding: 14px 42px;
+			border-bottom: 1px solid #C4C4C4;
+		}
+		
+		.dishbox-bottom {
+			width: 660px;
+			background-color: #fff;
+			overflow: hidden;
+		}
+		.dishbox-bottom li {
+			box-sizing: border-box;
+			padding: 25px;
+			border-right:1px solid #C4C4C4;
+			border-bottom:1px solid #C4C4C4 ;
+			float: left;
+			width: 220px;
+			height: 252px;
+
+		}
+		.dishbox-bottom li:nth-child(3n){
+			border-right: 0;
+		}
+		
+		.dishname {
+			font-size: 14px;
+			font-weight: 700;
+			margin-top: 10px;
+			margin-bottom: 3px;
+			display: inline-block;
+			width: 170px;
+			height: 19px;
+			font-family: "微软雅黑";
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.zan {
+			margin-left: 5px;
+			font-size: 12px;
+			color: #666;
+		}
+		.dishprice {
+			display: inline-block;
+			margin-top: 7px;
+			color: red;
+		}
+		.jiabutton {
+			float: right;
+			font-weight: 700;
+			text-align: center;
+			line-height: 24px;
+			font-size: 20px;
+			width: 24px;
+			height: 24px;
+			margin-top: 4px;
+			border-radius: 50%;
+			background-color: #ffd161;
+			cursor: pointer;
+		}
+		
+		/*菜品部分结束*/
+		
+		/*购物车部分*/
+		.buycart {
+				overflow: hidden;
+				position: fixed;
+				right: 14%;
+				bottom: 0;
+				width: 306px;
+
+				background-color: #fff;
+			}
+			
+			.buycart-top {
+				background-color: #fffdf0;
+				font-size: 14px;
+				color: #4A4A4A;
+				width: 306px;
+				height: 45px;
+				box-sizing: border-box;
+				padding: 15px 0 17px 20px;
+				
+				
+			}
+			.buycart-bottom {
+				
+				overflow: hidden;
+				width: 306px;
+				height: 50px;
+				box-sizing: border-box;
+
+			}
+			.buycart-bottom-left {
+				color: #fff;
+				float: left;
+				height: 100%;
+				width: 160px;
+				padding-left: 30px;
+				font-size: 35px;
+				background-color: #333;
+			}
+			#buy {
+			
+				float: left;
+				width: 116px;
+				height: 100%;
+				text-align: center;
+				line-height: 50px;
+				background-color: #a0a0a0;
+			}
+			.panduan {
+				color: #fff;
+			}
+			
+			.dishcart {
+				position: relative;
+				box-sizing: border-box;
+				width: 100%;
+				padding: 0px 10px;
+			}
+			.dishcart-top {
+
+				overflow: hidden;
+				padding: 10px 0;
+				color: #4A4A4A;
+			}
+			.cleardish {
+				float: right;
+			}
+			
+			.dishcart-middle li {
+				overflow: hidden;
+				padding: 10px 0px 10px;
+				border-bottom: 1px solid #BBB;
+			}
+			.name {
+				display:inline-block;
+				width: 70px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				font-family:"微软雅黑";
+				font-size:13px;
+				float: left;
+			}
+			
+			.button {
+				
+				float: left;
+				margin-left: 30px;
+				width: 80px;
+				height: 24px;
+				box-sizing: border-box;
+				border: 1px solid #F2F2F2;
+				background-color: #fff;
+				
+			}
+			.button span {
+				margin-right: 0;
+			}
+			.jian {
+				cursor: pointer;
+				float: left;
+				text-align: center;
+				width: 17px;
+				height: 24px;
+				line-height: 24px;
+			}
+			.cainumber {
+				font-size: 14px;
+				float: left;
+				background-color: #F2F2F2;
+				text-align: center;
+				width: 44px;
+				height: 22px;
+				line-height: 24px;
+			}
+			.jia {
+				cursor: pointer;
+				float: left;
+				text-align: center;
+				width: 17px;
+				height: 24px;
+				line-height: 24px;
+			}
+			.caiprice {
+				float: right;
+				color: sandybrown;
+				
+			}
+			
+			.dishcart-bottom {
+				box-sizing: border-box;
+				padding-top: 20px;
+				width: 306px;
+				height: 54px;
+				
+			}
+			.dishcart-bottom p {
+				margin-left: 80px;
+
+			}
+			.totalnumber {
+				color: #CC0000;
+			}
+			.totalprice {
+				font-size: 20px;
+				color: #FF0000;
+			}
+			

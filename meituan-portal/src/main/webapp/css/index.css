@@ -1,0 +1,367 @@
+@font-face {  /* 电脑中没有的字体，我们需要声明 */
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7kkyc2');
+  src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body {
+			background-color: #f5f5f5;
+		}
+		.banxin {
+			width: 980px;
+			margin: 0 auto;
+		}
+		/*页面头部分样式开始*/
+		#name {
+				display:inline-block;
+				height:32px;
+				color: #d7d7dd;
+				font-size: 14px;
+				position: relative;
+				cursor: pointer;
+				visibility: hidden;
+			}
+		#name #down {
+			visibility: hidden;
+		}
+			#name:hover #xialikuang{
+				
+				visibility: visible;
+			}
+			#xialikuang {
+			z-index: 1;
+			position: absolute;
+			background-color: #FFFFFF;
+			visibility:hidden;
+		}
+		#xialikuang:hover {
+			visibility: visible;
+		}
+		#xialikuang li a {
+			font-size: 12px;
+			display: block;
+			width: 58px;
+			padding-left: 8px;
+			color: #898989;
+		}
+		#xialikuang a:hover {
+			background-color: rgba(0,0,0,.1);
+		}
+		#down {
+				color: #d7d7dd;
+				font-size: 8px;
+			}
+			
+		header {
+			height: 32px;
+			line-height: 32px;
+			background-color: #333;
+		}
+		.top-nav {
+			height: 32px;
+			font-size: 9px;
+			
+		}
+		.top-left .addressimg{
+			font-family: "icomoon";
+			color:#D7D7D7 ;
+			font-size: 10px;
+
+		}
+		.address {
+			color: #d7d7d7;
+			padding-right: 5px;
+		}
+		.top-left {
+			float: left;
+		}
+		.top-left a{
+			color: #f8cc5c;
+			padding-left: 3px;
+
+		}	
+		.top-left i {
+			font-size: 10px;
+			font-style: normal;
+			color: #61574c;
+		}
+		/*顶部右部分开始*/
+		.top-right {
+			float: right;
+		}
+		.top-right .register {
+			margin-right: 2px;
+			color: #d7d7dd;
+		}
+		.login {
+			margin-left: 1px;
+			color: #D7D7DD;
+			margin-right: 43px;
+		}
+		
+		.top-right i {
+			font-size: 10px;
+			font-style: normal;
+			color: #d7d7dd;
+		}
+		.mobileVer, .meituanwang,.contact{
+			font-family: "icomoon";
+			margin-right: 15px;
+			color: #D7D7DD;
+
+		}
+		.contact {
+			margin-right: 0;
+		}
+		/*页面头部分样式结束*/
+		/*导航栏部分样式开始*/
+		.nav {
+			height: 85px;
+			background-color: #fff;
+			margin-bottom: 12px;
+		}
+		.nav-in {
+			height: 85px;
+			line-height: 85px;
+
+			position: relative;
+		}
+		.logo a img {
+			position: absolute;
+			left: 0;
+			top: 20px;
+			
+		}
+		/*小导航栏部分样式*/
+		.navitem li{
+			float: left;
+			margin-right: 64px;
+		}
+		.navitem li:first-child {
+			margin-left: 300px;
+		}
+		.navitem li a{
+			color: #333;
+		}
+		.navitem li a:hover {
+			color: #ffa765;
+		}
+		/*搜索框样式*/
+		.search {
+			width: 300px;
+			height: 42px;
+			line-height: 0;
+			background-color: purple;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.search input {
+			width: 250px;
+			height: 42px;
+			outline: none;
+			box-sizing: border-box;
+			border: 2px solid #e5e5e5;
+			float: left;
+			padding-left: 8px;
+		}
+		.search button {
+			outline: none;
+			float:left;
+			width: 50px;
+			height: 42px;
+			box-sizing: border-box;
+			border: 2px solid #E5E5E5;
+			border-left: 0;
+			background-color: #fff;
+			cursor: pointer;
+		}
+		.search button span {
+			font-family: "icomoon";
+			font-size: 20px;
+		}
+		
+		/*导航栏部分样式结束*/
+		/*分类二部分开始*/
+		.sort2 {
+			box-sizing: border-box;
+			padding: 39px 0 50px 23px;
+			height: 103px;
+			background-color: #fff;
+			font-size: 14px;
+		}
+		.sort2 li {
+			margin-right: 22px;
+			float: left;
+		}
+		.sort2 li:first-child {
+			margin-right: 46px;
+		}
+		.sort2 .selected a{
+			color:#ffa765 ;
+		}
+		.sort2 li a {
+			color: #898989;
+		}
+		.sort2 li a:hover {
+			color: #ffa765;
+		}
+		
+		.sort2 li img {
+			vertical-align: top;
+			margin-right: 7px;
+		}
+		/*分类二部门结束*/
+		/*主体部分样式*/
+		.banner {
+			margin-top: 12px;
+			box-sizing: border-box;
+			padding: 15px;
+			background-color: #fff;
+			overflow: hidden;
+		}
+		.banner li {
+			width: 237px;
+			height: 288px;
+			float: left;
+			border-bottom: 1px solid #dadada;
+		}
+		.banner .dian {
+			padding: 20px 16px 0;
+			background-color: #fff;
+
+		}
+		.banner .dian a {
+			display: block;
+			width: 210px;
+			height: 250px;
+
+		}
+		.dian a .dianming {
+			margin:16px 0 6px;
+			color: #000;
+
+		}
+		.pingjiarank img {
+			width: 14px;
+			
+		}
+		.pingjiarank span {
+			margin-left: 7px;
+			color: #707070;
+			font-size: 14px;
+		}
+		.price {
+			margin-top: 3px;
+			color: #707070;
+			font-size: 12px;
+		}
+		.price span {
+			margin-right: 10px;
+		}
+		.price .time {
+			margin-right: 0;
+			float: right;
+		}
+		/*主体部分样式结束*/
+		
+		/*加载更多部分样式*/
+		.loadmore {
+			cursor: pointer;
+			height: 60px;
+			background-color: #fff;
+			text-align: center;
+			line-height: 50px;
+			margin-bottom: 32px;
+		}
+		footer {
+			height: 185px;
+			background-color: #fff;
+			margin-bottom: 12px;
+		}
+		.footer-in {
+			padding: 32px 0;
+
+		}
+		.col1 {
+			width: 146px;
+			float: left;
+		}
+		.col1 li {
+			line-height:33px ;
+		}
+		.col1 li a {
+			color: #666666;
+			font-size: 14px;
+		}
+		.col1 li a:hover {
+			color: #000000;
+		}
+		.telephone {
+			float: left;
+			width: 250px;
+			height: 114px;
+			margin-top: 10px;
+
+			border-left: 1px dashed #333333;
+			border-right: 1px dashed #333;
+		}
+		.telephone h4 {
+			margin-left: 48px;
+			color: #333;
+			font-size: 20px;
+		}
+		.telephone p {
+			margin-left: 48px;
+			margin-top: 10px;
+			color: #666;
+			font-size: 14px;
+		}
+		
+		
+		.erweima img{
+			float: left;
+			margin-left: 50px;
+			margin-right: 15px;
+
+		}
+		.erweima h4 {
+			color: #2a2a2a;
+			margin-top: 10px;
+		}
+		.erweima p {
+			margin-top: 10px;
+			color: #666;
+			font-size: 12px;
+		}
+		
+		/*版权样式*/
+		.copyright {
+			width: 500px;
+			height: 42px;
+			margin: 0 auto;
+
+		}
+		.copyright img {
+			vertical-align: middle;
+		}
+		.copyright span {
+			color: #999;
+			font-size: 12px;
+			margin-left: 20px;
+		}

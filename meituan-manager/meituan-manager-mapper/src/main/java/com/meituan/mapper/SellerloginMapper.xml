@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.meituan.mapper.SellerloginMapper" >
+  <resultMap id="BaseResultMap" type="com.meituan.pojo.Sellerlogin" >
+    <id column="lid" property="lid" jdbcType="BIGINT" />
+    <result column="sellername" property="sellername" jdbcType="VARCHAR" />
+    <result column="passwor" property="passwor" jdbcType="VARCHAR" />
+    <result column="sid" property="sid" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    lid, sellername, passwor, sid
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.meituan.pojo.SellerloginExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from sellerlogin
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from sellerlogin
+    where lid = #{lid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sellerlogin
+    where lid = #{lid,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.meituan.pojo.SellerloginExample" >
+    delete from sellerlogin
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.meituan.pojo.Sellerlogin" >
+    insert into sellerlogin (lid, sellername, passwor, 
+      sid)
+    values (#{lid,jdbcType=BIGINT}, #{sellername,jdbcType=VARCHAR}, #{passwor,jdbcType=VARCHAR}, 
+      #{sid,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.meituan.pojo.Sellerlogin" >
+    insert into sellerlogin
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="lid != null" >
+        lid,
+      </if>
+      <if test="sellername != null" >
+        sellername,
+      </if>
+      <if test="passwor != null" >
+        passwor,
+      </if>
+      <if test="sid != null" >
+        sid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="lid != null" >
+        #{lid,jdbcType=BIGINT},
+      </if>
+      <if test="sellername != null" >
+        #{sellername,jdbcType=VARCHAR},
+      </if>
+      <if test="passwor != null" >
+        #{passwor,jdbcType=VARCHAR},
+      </if>
+      <if test="sid != null" >
+        #{sid,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.meituan.pojo.SellerloginExample" resultType="java.lang.Integer" >
+    select count(*) from sellerlogin
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update sellerlogin
+    <set >
+      <if test="record.lid != null" >
+        lid = #{record.lid,jdbcType=BIGINT},
+      </if>
+      <if test="record.sellername != null" >
+        sellername = #{record.sellername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.passwor != null" >
+        passwor = #{record.passwor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sid != null" >
+        sid = #{record.sid,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update sellerlogin
+    set lid = #{record.lid,jdbcType=BIGINT},
+      sellername = #{record.sellername,jdbcType=VARCHAR},
+      passwor = #{record.passwor,jdbcType=VARCHAR},
+      sid = #{record.sid,jdbcType=BIGINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.meituan.pojo.Sellerlogin" >
+    update sellerlogin
+    <set >
+      <if test="sellername != null" >
+        sellername = #{sellername,jdbcType=VARCHAR},
+      </if>
+      <if test="passwor != null" >
+        passwor = #{passwor,jdbcType=VARCHAR},
+      </if>
+      <if test="sid != null" >
+        sid = #{sid,jdbcType=BIGINT},
+      </if>
+    </set>
+    where lid = #{lid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.meituan.pojo.Sellerlogin" >
+    update sellerlogin
+    set sellername = #{sellername,jdbcType=VARCHAR},
+      passwor = #{passwor,jdbcType=VARCHAR},
+      sid = #{sid,jdbcType=BIGINT}
+    where lid = #{lid,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,717 @@
+		@font-face {  /* 电脑中没有的字体，我们需要声明 */
+  			font-family: 'icomoon';
+ 			 src:  url('../fonts/icomoon.eot?7kkyc2');
+  			 src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+   			 url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+   			 url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+   			 url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  			font-weight: normal;
+  			font-style: normal;
+  }
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body {
+			position: relative;
+			background-color: #f5f5f5;
+		}
+		.banxin {
+			width: 980px;
+			margin: 0 auto;
+		}
+		/*页面头部分样式开始*/
+		#name {
+				display:inline-block;
+				height:32px;
+				color: #d7d7dd;
+				font-size: 14px;
+				position: relative;
+				cursor: pointer;
+				visibility: none;
+			}
+		#name #down{
+			visibility: hidden;
+		}
+			#name:hover #xialikuang{
+				
+				visibility: visible;
+			}
+			#xialikuang {
+			z-index: 1;
+			position: absolute;
+			background-color: #FFFFFF;
+			visibility:hidden;
+		}
+		#xialikuang:hover {
+			visibility: visible;
+		}
+		#xialikuang li a {
+			font-size: 12px;
+			display: block;
+			width: 58px;
+			padding-left: 8px;
+			color: #898989;
+		}
+		#xialikuang a:hover {
+			background-color: rgba(0,0,0,.1);
+		}
+		#down {
+				color: #d7d7dd;
+				font-size: 8px;
+			}
+			
+		header {
+			height: 32px;
+			line-height: 32px;
+			background-color: #333;
+		}
+		.top-nav {
+			height: 32px;
+			font-size: 9px;
+			
+		}
+		.top-left .addressimg{
+			font-family: "icomoon";
+			color:#D7D7D7 ;
+			font-size: 10px;
+
+		}
+		.address {
+			color: #d7d7d7;
+			padding-right: 5px;
+		}
+		.top-left {
+			float: left;
+		}
+		.top-left a{
+			color: #f8cc5c;
+			padding-left: 3px;
+
+		}	
+		.top-left i {
+			font-size: 10px;
+			font-style: normal;
+			color: #61574c;
+		}
+		/*顶部右部分开始*/
+		.top-right {
+			float: right;
+		}
+		.top-right .register {
+			margin-right: 2px;
+			color: #d7d7dd;
+		}
+		.login {
+			margin-left: 1px;
+			color: #D7D7DD;
+			margin-right: 43px;
+		}
+		
+		.top-right i {
+			font-size: 10px;
+			font-style: normal;
+			color: #d7d7dd;
+		}
+		.mobileVer, .meituanwang,.contact{
+			font-family: "icomoon";
+			margin-right: 15px;
+			color: #D7D7DD;
+
+		}
+		.contact {
+			margin-right: 0;
+		}
+		/*页面头部分样式结束*/
+		
+		/*导航栏部分样式开始*/
+		.nav {
+			height: 85px;
+			background-color: #fff;
+			margin-bottom: 12px;
+		}
+		.nav-in {
+			height: 85px;
+			line-height: 85px;
+
+			position: relative;
+		}
+		.logo a img {
+			position: absolute;
+			left: 0;
+			top: 20px;
+			
+		}
+		/*小导航栏部分样式*/
+		.navitem li{
+			float: left;
+			margin-right: 64px;
+		}
+		.navitem li:first-child {
+			margin-left: 300px;
+		}
+		.navitem li a{
+			color: #333;
+		}
+		.navitem li a:hover {
+			color: #ffa765;
+		}
+		/*搜索框样式*/
+		.search {
+			width: 300px;
+			height: 42px;
+			line-height: 0;
+			background-color: purple;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.search input {
+			width: 250px;
+			height: 42px;
+			outline: none;
+			box-sizing: border-box;
+			border: 2px solid #e5e5e5;
+			float: left;
+			padding-left: 8px;
+		}
+		.search button {
+			outline: none;
+			float:left;
+			width: 50px;
+			height: 42px;
+			box-sizing: border-box;
+			border: 2px solid #E5E5E5;
+			border-left: 0;
+			background-color: #fff;
+			cursor: pointer;
+		}
+		.search button span {
+			font-family: "icomoon";
+			font-size: 20px;
+		}
+		
+		/*导航栏部分样式结束*/
+		
+		/*页面底部分*/
+		footer {
+			height: 185px;
+			background-color: #fff;
+			margin-top: 30px;
+			margin-bottom: 12px;
+		}
+		.footer-in {
+			padding: 32px 0;
+
+		}
+		.col1 {
+			width: 146px;
+			float: left;
+		}
+		.col1 li {
+			line-height:33px ;
+		}
+		.col1 li a {
+			color: #666666;
+			font-size: 14px;
+		}
+		.col1 li a:hover {
+			color: #000000;
+		}
+		.telephone {
+			float: left;
+			width: 250px;
+			height: 114px;
+			margin-top: 10px;
+
+			border-left: 1px dashed #333333;
+			border-right: 1px dashed #333;
+		}
+		.telephone h4 {
+			margin-left: 48px;
+			color: #333;
+			font-size: 20px;
+		}
+		.telephone p {
+			margin-left: 48px;
+			margin-top: 10px;
+			color: #666;
+			font-size: 14px;
+		}
+		
+		
+		.erweima img{
+			float: left;
+			margin-left: 50px;
+			margin-right: 15px;
+
+		}
+		.erweima h4 {
+			color: #2a2a2a;
+			margin-top: 10px;
+		}
+		.erweima p {
+			margin-top: 10px;
+			color: #666;
+			font-size: 12px;
+		}
+		/*页面底部分结束*/
+		
+		/*版权样式*/
+		.copyright {
+			width: 500px;
+			height: 42px;
+			margin: 0 auto;
+
+		}
+		.copyright img {
+			vertical-align: middle;
+		}
+		.copyright span {
+			color: #999;
+			font-size: 12px;
+			margin-left: 20px;
+		}
+		.sure {
+			font-family: "微软雅黑";
+			font-size: 14px;
+			height: 50px;
+			line-height: 50px;
+		}
+		.sure span {
+			margin-right: 10px;
+		}
+		
+		.sure .restName {
+			cursor: pointer;
+			padding-left: 13px;
+			border-left: 7px solid #333;
+			margin-right: 0px;
+			font-weight: 700;
+			font-family: "微软雅黑";
+			font-size: 14px;
+		}
+		.sure span:last-child{
+			font-weight: 700;
+			color: red;
+		}
+		
+		/*菜品----价格/份数部分*/
+		.main {
+			overflow: hidden;
+		}
+		
+		.main-left {
+			background-color: #fff;
+			width: 370px;
+			box-sizing: border-box;
+			padding: 0 15px;
+			float: left;
+		}
+		.main-left ul li {
+			line-height: 56px;
+			height: 56px;
+
+			border-bottom: 1px dashed #BBBBBB;
+		}
+		.main-left li:first-child {
+			font-size: 14px;
+			font-family: "微软雅黑";
+			color: #000;
+			font-weight: 700;
+		}
+		.caipin {
+			display: inline-block;
+			font-size: 14px;
+			width: 200px;
+			color: blue;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+		.jiage {
+			color: blue;
+		}
+		
+		.heji {
+			font-family: "微软雅黑";
+			font-weight:700;
+			color: red;
+		}
+		.totalprice {
+			color: red;
+		}
+		.youhuiquan {
+			position: relative;
+
+			font-family: "微软雅黑";
+			color: #6A6A6A;
+			font-size: 14px;
+			padding: 20px 0 40px 100px;
+			padding-left: 70px;
+		}
+		.gudi {
+			display: inline-block;
+			padding-top: 8px;
+		}
+		.youhuiquan input[type=text]{
+			border: 1px solid #DDDDDD;
+			outline: none;
+			cursor: pointer;
+			font-family: "微软雅黑";
+			color: #6A6A6A;
+			font-size: 14px;
+			float: right;
+			box-sizing: border-box;
+			width: 188px;
+			height: 34px;
+			padding-left: 8px;
+			padding-right: 34px;
+
+
+		}
+		
+		.arrow-down {
+			z-index: 1;
+			cursor: pointer;
+			width: 34px;
+			height: 34px;
+			position: absolute;
+			font-size: 11px;
+			font-family: arial;
+			line-height: 34px;
+			text-align: center;
+			right: 0;
+			top: 20px;
+		}
+		.quan-info {
+			visibility: hidden;
+			right: 0;
+			top: -13px;
+			position: absolute;
+		}
+		.quan-info input[type=text]{
+
+			border: 1px solid orange;
+			color:red;
+		}
+		
+		
+		
+		
+		/*菜品----价格/份数部分结束*/
+		
+		/*送餐详情部分*/
+		
+		.main-right {
+			float: right;
+			width: 588px;
+			background-color: #fff;
+			box-sizing: border-box;
+			padding: 30px 0;
+		}
+		.main-right-top {
+			padding: 0px 30px;
+		}
+		
+		.Address-container {
+			transition: all 2s;
+		}
+		
+		.addnewAddress {
+			font-size: 14px;
+			font-weight: normal;
+			cursor: pointer;
+		}
+		
+		
+		.showall {
+			display: none;
+			border-top: 1px solid #E5E5E5;
+			font-family: "微软雅黑";
+			font-size: 14px;
+			color: #C4C4C4;
+			text-align: center;
+			height: 50px;
+
+		}
+		.showall span {
+			cursor: pointer;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 10px;
+			border: 1px solid #E5E5E5;
+			border-top: 1px solid #fff;
+		}
+		
+		
+		
+		.userAddress {
+			cursor: pointer;
+			box-sizing: border-box;
+			padding: 0px 30px 0px 30px;
+			width: 530px;
+			height: 86px;
+			background-color: #F5F5F5;
+			margin-bottom: 24px;
+			border: 1px solid #F5F5F5;
+		}
+		.userAddress:hover {
+			border: 1px solid #FF9900;
+		}
+		
+		.userAddress:hover .Hide-ReviseOrDel {
+			display: block;
+			font-size: 14px;
+			color: #FF9900;
+			float: right;
+		}
+		.userAddress p 
+		{	height: 42px;
+			line-height: 42px;
+		}
+		.userAddress P span {
+			margin-right: 10px;
+		}
+		.userAddress p:first-child{
+			border-bottom: 1px dashed #666;
+		}
+		
+		.Hide-ReviseOrDel {
+			display: none;
+			font-size: 14px;
+			color: #FF9900;
+			float: right;
+		}
+		
+		h3 {
+			margin-bottom: 20px;
+		}
+		
+		.addAddress {
+			color: #BBB;
+			margin-top: 15px;
+
+			padding: 40px 0;
+			background-color: #F5F5F5;
+			text-align: center;
+			cursor: pointer;
+			margin-bottom: 40px;
+			border: 1px solid #F5F5F5;
+			
+
+		}
+		.addAddress:hover {
+			border: 1px solid #FF9900;
+		}
+		.addjia {
+			cursor: pointer;
+			text-align: center;
+			border: 1px solid #DADADA;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+			background-color: #fff;
+			line-height: 20px;
+			border-radius: 50%;
+		}
+		
+		.message {
+			font-size: 14px;
+			font-weight: 700;
+			color: #666;
+		}
+		.message input[type=text]{
+			border: 1px solid #C4C4C4;
+			outline: none;
+			width: 360px;
+			height: 34px;
+			color: #666;
+			padding-left: 10px;
+			margin-left: 20px;
+		}
+		.howtopay {
+			margin-top: 40px;
+			padding: 10px 30px;
+			background-color: #fff9da;
+			font-size: 14px;
+			color: #666;
+		}
+		.howtopay select {
+			padding-left: 3px;
+			padding-right: 10px;
+			border: 1px solid #666;
+			margin-left: 10px;
+			outline: none;
+		}
+		.pay {
+			margin-top: 40px;
+			padding: 0px 30px;
+			font-weight: 700;
+			color: #2A2A2A;
+			
+		}
+		.tprice {
+			font-size: 35px;
+			color: red;
+		}
+		.gotopay {
+			cursor: pointer;
+			margin-left: 100px;
+			width: 100px;
+			height: 34px;
+			display: inline-block;
+			background-color: #F8CC5C;
+			text-align: center;
+			line-height: 34px;
+			color: #4A4A4A;
+		}
+		.gotopay:hover {
+			background-color: #EB3C3F;
+			color: #fff;
+		}
+		
+		.addAddress-hidden {
+			visibility: hidden;
+			box-sizing: border-box;
+			z-index: 3;
+			width: 552px;
+			height: 440px;
+			background-color: #fff;
+			position: absolute;
+			left: 50%;
+			top: 18%;
+			transform: translateX(-50%);
+		}
+		.addAddress-hidden-two {
+			box-sizing: border-box;
+			z-index: 3;
+			width: 552px;
+			height: 440px;
+			background-color: #fff;
+			position: absolute;
+			left: 50%;
+			top: 18%;
+			transform: translateX(-50%);
+			visibility:hidden;
+		}
+		.hidePage {
+			visibility: hidden;
+			z-index: 2;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.1);
+		}
+		.cha {
+			font-family: "微软雅黑";
+			padding: 10px 20px;
+			background-color: #4589BF;
+		}
+		.chaBtn {
+			margin-top: -7px;
+
+			cursor: pointer;
+			font-size: 30px;
+			font-family: arial;
+			float: right;
+		}
+		.shouhuoxinxi {
+			width: 100%;
+			height: 358px;
+			box-sizing: border-box;
+			padding: 30px 0 30px 30px;
+
+		}
+		.contactName {
+			font-family: "微软雅黑";
+			height: 66px;
+			margin-bottom: 30px;
+			
+
+		}
+		.orange {
+			margin-right: 10px;
+			color: #FA9700;
+		}
+		
+		
+		.xingminkuang {
+			outline: none;
+			border: 1px solid #C0C0C0;
+			width: 212px;
+			height: 34px;
+			padding-left: 12px;
+			margin-bottom: 10px;
+		}
+		.xingbie{
+			padding-left: 105px;
+		}
+		.contactName input[type=radio]{
+			margin-left: 5px;
+			margin-right: 10px;
+
+		}
+		
+		.phoneNumber {
+			margin-bottom: 30px;
+		}
+		.family {
+			margin-right: 20px;
+
+		}
+		.aaaaa {
+			margin-left: 20px;
+			margin-right: 18px;
+		}
+		.shoujikuang {
+			width: 358px;
+			height: 34px;
+			padding-left: 12px;
+			outline: none;
+			border: 1px solid #C0C0C0;
+			
+		}
+		.shoucan {
+			margin-bottom: 30px;
+		}
+		
+		
+		
+		.btnTwo {
+			padding-left: 140px;
+		}
+		
+		.save ,.cancel{
+			margin-left: 30px;
+			cursor: pointer;
+			display: inline-block;
+			width: 110px;
+			height: 40px;
+			background-color: #FA9700;
+			line-height: 40px;
+			text-align: center;
+		}
+		.cancel {
+			background-color: #BBBBBB;
+		}
+		
+		.oo {
+			display: none;
+
+			margin-top: -10px;
+			margin-left: 120px;
+			margin-bottom: 20px;
+			font-size: 14px;
+			color: #FFA765;
+		}
+		
+		/*送餐详情部分结束*/

@@ -1,0 +1,131 @@
+@font-face {  /* 电脑中没有的字体，我们需要声明 */
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7kkyc2');
+  src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+
+				background-color: #fff;
+				
+
+			}
+			/*登录logo样式*/
+			.banxin {
+				width: 980px;
+				margin: 0px auto;
+			}
+			.logo {
+				height: 60px;
+				margin-top: 40px;
+				margin-bottom: 30px;
+
+			}
+			/*主体部分样式*/
+			.main {
+				height: 383px;
+				background: url(../images/rb.png) 520px 26% no-repeat;
+				background-size:580px;
+			}
+			.login {
+				margin-top: 40px;
+				width: 270px;
+				height: 383px;
+
+				float: right;
+				margin-right: 170px;
+				position: relative;
+			}
+			.zi {
+				text-align: center;
+				font-weight: 700;
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+			.user {
+				position: absolute;
+				left: 8px;
+				top: 95px;
+				font-family: "icomoon";
+				font-size: 18px;
+				color: #ddd;
+			}
+			.lock {
+				position: absolute;
+				left: 10px;
+				top: 142px;
+				font-family: "icomoon";
+				font-size: 16px;
+				color: #ddd;
+			}
+			.login input[type=text]{
+				width: 270px;
+				height: 36px;
+				box-sizing: border-box;
+				outline:0;
+				padding-left: 35px;
+				margin-bottom: 10px;
+				border: 0;
+			}
+			.login input[type=password]{
+				width: 270px;
+				height: 36px;
+				box-sizing: border-box;
+				outline:0;
+				padding-left: 35px;
+				margin-bottom: 10px;
+				border: 0;
+			}
+			.login input:focus {
+				outline: #ffd705 solid 2px;
+			}
+			.forget {
+				margin-left: 205px;
+				color: #fa9700;
+				font-size: 14px;
+				text-decoration: none;
+			}
+			.forget:hover {
+				text-decoration: underline;
+			}
+			.login input[type=submit] {
+				width: 270px;
+				height: 38px;
+				font-size: 14px;
+				color: #91450a;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				background-color: #ffd705;
+				outline: none;
+				border: 0;
+				cursor: pointer;
+			}
+			.no {
+				font-size: 14px;
+			}
+			.no a {
+				color:#fa9700 ;
+				text-decoration: none;
+				margin-left: 117px;
+			}
+			.no a:hover {
+				text-decoration: underline;
+			}
+			.info {
+				line-height: 30px;
+				padding-left: 10px;
+				color: coral;
+				font-size: 14px;
+				height: 30px;
+				margin-bottom: 15px;
+				background-color: rgba(0,0,0,.1);
+				visibility: hidden;
+			}

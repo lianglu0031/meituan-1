@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.meituan.mapper.DeliverInfMapper" >
+  <resultMap id="BaseResultMap" type="com.meituan.pojo.DeliverInf" >
+    <id column="did" property="did" jdbcType="BIGINT" />
+    <result column="uid" property="uid" jdbcType="BIGINT" />
+    <result column="dname" property="dname" jdbcType="VARCHAR" />
+    <result column="daddress" property="daddress" jdbcType="VARCHAR" />
+    <result column="dphone" property="dphone" jdbcType="VARCHAR" />
+    <result column="dgender" property="dgender" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    did, uid, dname, daddress, dphone, dgender
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.meituan.pojo.DeliverInfExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from deliver_inf
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from deliver_inf
+    where did = #{did,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from deliver_inf
+    where did = #{did,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.meituan.pojo.DeliverInfExample" >
+    delete from deliver_inf
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.meituan.pojo.DeliverInf" >
+    insert into deliver_inf (did, uid, dname, 
+      daddress, dphone, dgender
+      )
+    values (#{did,jdbcType=BIGINT}, #{uid,jdbcType=BIGINT}, #{dname,jdbcType=VARCHAR}, 
+      #{daddress,jdbcType=VARCHAR}, #{dphone,jdbcType=VARCHAR}, #{dgender,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.meituan.pojo.DeliverInf" >
+    insert into deliver_inf
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="did != null" >
+        did,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="dname != null" >
+        dname,
+      </if>
+      <if test="daddress != null" >
+        daddress,
+      </if>
+      <if test="dphone != null" >
+        dphone,
+      </if>
+      <if test="dgender != null" >
+        dgender,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="did != null" >
+        #{did,jdbcType=BIGINT},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="dname != null" >
+        #{dname,jdbcType=VARCHAR},
+      </if>
+      <if test="daddress != null" >
+        #{daddress,jdbcType=VARCHAR},
+      </if>
+      <if test="dphone != null" >
+        #{dphone,jdbcType=VARCHAR},
+      </if>
+      <if test="dgender != null" >
+        #{dgender,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.meituan.pojo.DeliverInfExample" resultType="java.lang.Integer" >
+    select count(*) from deliver_inf
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update deliver_inf
+    <set >
+      <if test="record.did != null" >
+        did = #{record.did,jdbcType=BIGINT},
+      </if>
+      <if test="record.uid != null" >
+        uid = #{record.uid,jdbcType=BIGINT},
+      </if>
+      <if test="record.dname != null" >
+        dname = #{record.dname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.daddress != null" >
+        daddress = #{record.daddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dphone != null" >
+        dphone = #{record.dphone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dgender != null" >
+        dgender = #{record.dgender,jdbcType=TINYINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update deliver_inf
+    set did = #{record.did,jdbcType=BIGINT},
+      uid = #{record.uid,jdbcType=BIGINT},
+      dname = #{record.dname,jdbcType=VARCHAR},
+      daddress = #{record.daddress,jdbcType=VARCHAR},
+      dphone = #{record.dphone,jdbcType=VARCHAR},
+      dgender = #{record.dgender,jdbcType=TINYINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.meituan.pojo.DeliverInf" >
+    update deliver_inf
+    <set >
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="dname != null" >
+        dname = #{dname,jdbcType=VARCHAR},
+      </if>
+      <if test="daddress != null" >
+        daddress = #{daddress,jdbcType=VARCHAR},
+      </if>
+      <if test="dphone != null" >
+        dphone = #{dphone,jdbcType=VARCHAR},
+      </if>
+      <if test="dgender != null" >
+        dgender = #{dgender,jdbcType=TINYINT},
+      </if>
+    </set>
+    where did = #{did,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.meituan.pojo.DeliverInf" >
+    update deliver_inf
+    set uid = #{uid,jdbcType=BIGINT},
+      dname = #{dname,jdbcType=VARCHAR},
+      daddress = #{daddress,jdbcType=VARCHAR},
+      dphone = #{dphone,jdbcType=VARCHAR},
+      dgender = #{dgender,jdbcType=TINYINT}
+    where did = #{did,jdbcType=BIGINT}
+  </update>
+</mapper>
